@@ -1,0 +1,203 @@
+.navbar{
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    height: 110px;
+    @include flex(center, space-between);
+    width: 100%;
+    position: fixed;
+    z-index: 9999999;
+
+    &-container{
+        width: 100%;
+        max-width: 1300px; 
+        margin: 0 auto;
+        @include flex(center, space-between);
+        padding: 0 20px;
+    }
+
+    &-logo{
+        @include adaptive-value('width', 150, 110);
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+
+    &-links{
+        @include flex(center, space-around);
+        gap: 20px;
+        z-index: 1;
+
+            @media screen and (max-width: 900px){
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                backdrop-filter: blur(5px);
+                flex-direction: column;
+                transform: translateX(-100%);
+                transition: 0.5s ease-in-out;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-left: 55px;
+                padding-top: 150px;
+                gap: 24px;
+            }
+
+           
+
+    }
+
+    &-items{
+        position: relative;
+        @include flex(center, space-between);
+        gap: 20px;
+        @media screen and (max-width: 900px){
+            display: none;
+        }
+    }
+
+    &-translate{
+        border: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover path{
+            fill: #03B8FE;
+        }
+
+       
+    }
+
+    &-contact{
+        border: 2px solid #000;
+        background: #FFF;
+        padding: 8px;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border-radius: 3px;
+
+
+    }
+
+    &-mobile_logo{
+        display: none;
+        color: white;
+        font-family: Inter;
+
+        @media screen and (max-width: 900px){
+            display: block;
+            position: fixed;
+            top: 48px;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+
+    &-toggler div{
+        width: 2.5rem;
+        height: 0.2rem;
+        margin: 0.4rem;
+        background: #000;
+        transition: all 0.4s ease-in-out;
+    }
+
+    &-toggler{
+        cursor: pointer;
+        display: none;
+        z-index: 99999;
+        
+
+        @media screen and (max-width: 900px){
+            display: block;
+
+        }
+        
+    }
+
+    &-link{
+        color: #000;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            color: #03B8FE;
+        }
+
+        @media screen and (max-width: 900px){
+            color: #fff;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.36px;
+            text-transform: uppercase;
+        }
+
+    }
+
+    &-modal{
+        position: absolute;
+        top: 60px;
+        right: 130px;
+        background-color: #fff;
+        box-shadow: 4px 4px 30px 1px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        @include flex(center, unset);
+        gap: 5px;
+        
+        &_link{
+            font-family: Inter;
+            @include flex(center, unset);
+            gap: 5px;
+        }
+    }
+
+}
+
+    .navbar-active{
+        transform: translateX(0);
+    }
+
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px, 5px);
+    @media screen and (max-width: 900px){
+        background-color: #fff;
+    }
+    
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-7px, -9px);
+    @media screen and (max-width: 900px){
+        background-color: #fff;
+    }
+    
+}
+
+.navbar-modal.show{
+    opacity: 1;
+    visibility: visible;
+}

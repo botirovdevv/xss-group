@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+.projects{
+    padding-top: 150px;
+    &-title{
+        @include adaptive-value('font-size', 56, 22);
+        color: #000;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 70px;
+    }
+}
+
+.swiper{
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+
+    &-img{
+        width: 450px;
+        height: 300px;
+        background: #00B8FF;
+    }
+
+    &-slide{
+        text-align: center;
+        font-size: 18px;
+        @include flex(start, center);
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    &-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    
+
+    &-card__title{
+        @include adaptive-value('font-size', 38, 25);
+        color: #000;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &-items{
+        @include flex(center, space-between);
+        width: 100%;
+    }
+
+
+
+    &-items__title{
+        @include adaptive-value('font-size', 25, 15);
+        color: rgba(106, 104, 104, 0.60);
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &-items__year{
+        @include adaptive-value('font-size', 20, 16);
+        color: rgba(106, 104, 104, 0.60);
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &-pagination-bullet{
+        @include adaptive-value('width', 12, 9);
+        @include adaptive-value('height', 12, 9);
+    }
+
+    
+
+    
+}
+
+.swiper-slide{
+    --add-bottom: 50px;
+    padding-bottom: var(--add-bottom);
+}
+.swiper-pagination [class^="swiper-pagination"]{
+    top: calc(50% - var(--add-bottom) / 2);
+}
