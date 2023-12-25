@@ -2,6 +2,7 @@
 
 .projects{
     padding-top: 150px;
+
     &-title{
         @include adaptive-value('font-size', 56, 22);
         color: #000;
@@ -10,6 +11,42 @@
         font-weight: 700;
         line-height: normal;
         margin-bottom: 70px;
+    }
+
+    &-items{
+        @include flex(center, space-between);
+        padding-top: 80px;
+    }
+
+    &-link{
+        color: #00B8FF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 23, 19);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.72px;
+        text-decoration-line: underline;
+        @include flex(center, unset);
+        gap: 5px;
+    }
+
+    &-btn{
+        background: #00B8FF;
+        border: none;
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 22, 20);
+        padding: 10px 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.72px;
+        border-radius: 4px;
+
+        @media screen and (max-width: 500px){
+            display: none;
+        }
     }
 }
 

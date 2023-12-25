@@ -1,0 +1,85 @@
+.info{
+    background-color: #03B8FE;
+    width: 100%;
+    height: 100%;
+    margin-top: 130px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &-title{
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 50, 30);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 70px;
+    }
+
+    &-accardion_title{
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 30, 24);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -1.32px;
+    }
+
+    &-accardion{
+        @include flex(start, space-between);
+        cursor: pointer;
+        @media screen and (max-width: 550px){
+            display: block;
+        }
+        border-top: 1px solid #fff;
+        padding: 25px;
+    }
+
+    &-text{
+        @include flex(center, space-between);
+        gap: 150px;
+
+        @media screen and (max-width: 550px){
+            gap: 15px;            
+        }
+    }
+
+    &-accardion-close{
+        border: none;
+    }
+
+    &-body{
+        width: 400px;
+        height: 0;
+        overflow: hidden;
+
+        @media screen and (max-width: 550px){
+            width: 100%;
+        }
+    }
+    
+    &-subtitle{
+        transition: all 0.5s cubic-bezier(0,1,0,1);
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 21, 18);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; 
+        letter-spacing: 1.15px;
+        margin-top: 19px;
+    }
+
+    &-icon{
+        @media screen and (max-width: 550px){
+            display: none;
+        }
+    }
+}
+
+.info-body.show{
+    height: auto;
+    transition: all 0.5s cubic-bezier(1,0,1,0);
+
+}

@@ -27,7 +27,7 @@
         gap: 20px;
         z-index: 1;
 
-            @media screen and (max-width: 900px){
+            @media screen and (max-width: 700px){
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -40,7 +40,7 @@
                 transition: 0.5s ease-in-out;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding-left: 55px;
+                // padding-left: 55px;
                 padding-top: 150px;
                 gap: 24px;
             }
@@ -54,7 +54,7 @@
         @include flex(center, space-between);
         gap: 20px;
         @media screen and (max-width: 900px){
-            display: none;
+            width: 100%;
         }
     }
 
@@ -66,7 +66,9 @@
             fill: #03B8FE;
         }
 
-       
+        @media screen and (max-width: 700px){
+            display: none;
+        }
     }
 
     &-contact{
@@ -80,7 +82,15 @@
         line-height: normal;
         border-radius: 3px;
 
+        @media screen and (max-width: 700px){
+            background-color: #03B8FE;
+            mix-blend-mode: screen;
+            color: #fff;
+            width: 100%;
+            border-radius: 0;
+            padding: 12px;
 
+        }
     }
 
     &-mobile_logo{
@@ -88,10 +98,11 @@
         color: white;
         font-family: Inter;
 
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 700px){
             display: block;
             position: fixed;
-            top: 48px;
+            top: 30px;
+            left: 50px;
             color: #FFF;
             font-family: Inter;
             font-size: 35px;
@@ -116,7 +127,7 @@
         z-index: 99999;
         
 
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 700px){
             display: block;
 
         }
@@ -131,12 +142,13 @@
         font-weight: 500;
         line-height: normal;
         transition: all 0.2s ease-in-out;
-
+        
         &:hover{
             color: #03B8FE;
         }
-
-        @media screen and (max-width: 900px){
+        
+        @media screen and (max-width: 700px){
+            margin-left: 50px;
             color: #fff;
             font-family: Inter;
             font-size: 20px;
@@ -151,7 +163,7 @@
 
     &-modal{
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 130px;
         background-color: #fff;
         box-shadow: 4px 4px 30px 1px rgba(0, 0, 0, 0.08);
@@ -162,6 +174,15 @@
         transition: all 0.2s ease-in-out;
         @include flex(center, unset);
         gap: 5px;
+
+        @media screen and (max-width: 700px){
+            opacity: 1;
+            visibility: visible;
+            background-color: transparent;
+            color: #fff;
+            box-shadow: none;
+            letter-spacing: 1px;
+        }
         
         &_link{
             font-family: Inter;

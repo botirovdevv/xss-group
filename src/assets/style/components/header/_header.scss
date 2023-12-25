@@ -14,10 +14,11 @@
     &-name_text{
         color: #000;
         font-family: Inter;
-        @include adaptive-value('font-size', 50, 30);
+        @include adaptive-value('font-size', 50, 29);
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        width: 100%;
     }
 
     &-info{

@@ -40,8 +40,6 @@ function Navbar() {
                 <a href="#" className='navbar-link'>Home</a>
                 <a href="#" className='navbar-link'>Service</a>
                 <a href="#" className='navbar-link'>Work</a>
-                <a href="#" className='navbar-link'>Team</a>
-                <a href="#" className='navbar-link'>Company</a>
                 <a href="#" className='navbar-link'>Contact</a>
 
                 <div className="navbar-items">
