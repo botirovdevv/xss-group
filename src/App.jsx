@@ -3,6 +3,8 @@ import Projects from './layout/main/Projects'
 import Navbar from './layout/header/Navbar'
 import Header from './layout/header/Header'
 import Info from './layout/main/Info'
+import Deliver from './layout/main/Deliver'
+import AboutProject from './layout/main/AboutProject'
 
 const App = () => {
   return (
@@ -11,7 +13,8 @@ const App = () => {
       <Header/>
       <Info/>
       <Projects/>
-
+      <Deliver/>
+      <AboutProject/>
     </div>
   )
 }
