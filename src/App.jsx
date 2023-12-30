@@ -5,6 +5,8 @@ import Header from './layout/header/Header'
 import Info from './layout/main/Info'
 import Deliver from './layout/main/Deliver'
 import AboutProject from './layout/main/AboutProject'
+import Contact from './layout/main/Contact'
+import Footer from './layout/footer/footer'
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Projects/>
       <Deliver/>
       <AboutProject/>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }

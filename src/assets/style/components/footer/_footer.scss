@@ -1,0 +1,106 @@
+.footer{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 70px;
+
+    &-content{
+        padding-top: 130px
+    }
+
+    &-logo{
+        @include adaptive-value('width', 140, 100);
+
+        @media screen and (max-width: 600px){
+            display: none;
+        }
+    }
+
+    &-text{
+        @media screen and (max-width: 600px){
+            display: none;
+        }
+    }
+
+    &-items{
+        @include flex(center, unset);
+        gap: 140px;
+
+        @media screen and (max-width: 760px){
+            gap: 100px;
+        }
+    }
+
+    &-title{
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 40, 25);
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        width: 800px;
+    }
+
+    &-info{
+        padding-top: 70px;
+        @include flex(start, unset);
+        gap: 110px;
+
+        @media screen and (max-width: 760px){
+            gap: 70px;
+        }
+    }
+
+    &-info_title{
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 26, 24);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &-info_subtitle{
+        color: #717171;
+        font-family: Inter;
+        @include adaptive-value('font-size', 20, 18);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding-top: 8px;
+    }
+
+    &-link{
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 22, 20);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &-contact{
+        @include flex(start, unset);
+        flex-direction: column;
+        gap: 7px;
+    }
+    
+    &-social{
+        @include flex(center, unset);
+        gap: 15px;
+        padding-top: 30px;
+    }
+
+    &-name_title{
+        color: #717171;
+        font-family: Inter;
+        @include adaptive-value('font-size', 15, 14);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &-name{
+        padding-top: 50px;
+    }
+}

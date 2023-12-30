@@ -1,0 +1,74 @@
+.contact{
+    background: #00B8FF;
+    padding-bottom: 130px;
+
+    &-content{
+        padding-top: 170px;
+    }
+
+    &-title{
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 50, 30);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &-form{
+        padding-top: 100px;
+        @include flex(center, space-between);
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+
+    &-input{
+        border: none;
+        border-bottom: 1px solid #fff;
+        background-color: transparent;
+        width: 500px;
+        padding: 8px;
+        outline: none;
+        color: #fff;
+        @include adaptive-value('font-size', 19, 17);
+        
+        @media screen and (max-width: 1100px){
+            width: 350px;
+        }
+
+        @media screen and (max-width: 800px){
+            width: 100%;
+        }
+    }
+
+    &-submit{
+        background-color: #fff;
+        border: none;
+        width: 100%;
+        color: #00B8FF;
+        padding: 15px;
+        margin-top: 70px;
+        border-radius: 3px;
+        font-size: 19px;
+    }
+
+    &-items{
+        @include flex(start, start);
+        flex-direction: column;
+
+        @media screen and (max-width: 800px){
+            width: 100%;
+        }
+    }
+
+    &-name{
+        color: #FFF;
+        font-family: Inter;
+        @include adaptive-value('font-size', 19, 17);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        
+    }
+}
