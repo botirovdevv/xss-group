@@ -1,6 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function Contact() {
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  }, [])
 
     const [uName, setUName] = useState('');
     const [email, setEmail] = useState('');
@@ -55,26 +60,26 @@ function Contact() {
     <section className="contact">
         <div className="container">
             <div className="contact-content">
-                <h1 className='contact-title'>CONTACT US</h1>
+                <h1 className='contact-title' data-aos="fade-right">CONTACT US</h1>
                 <form className='contact-form'>
                     <div className="contact-items">
-                        <label className="contact-name">Name *</label>
-                        <input value={uName} required onChange={handleInputChange} type="text" className='contact-input'  />
+                        <label className="contact-name" data-aos="fade-up">Name *</label>
+                        <input value={uName} data-aos="fade-up" required onChange={handleInputChange} type="text" className='contact-input'  />
                     </div>
                     
                     <div className="contact-items">
-                        <label className='contact-name'>Phone *</label>
-                        <input type="number" required value={phone} onChange={handlePhoneChange} className='contact-input' />
+                        <label className='contact-name' data-aos="fade-up">Phone *</label>
+                        <input type="number" required value={phone} data-aos="fade-up" onChange={handlePhoneChange} className='contact-input' />
                     </div>
 
                     <div className="contact-items">
-                        <label className='contact-name'>Email *</label>
-                        <input type="text" value={email} onChange={handleEmailChange} className='contact-input' />
+                        <label className='contact-name' data-aos="fade-up">Email *</label>
+                        <input type="text" value={email} data-aos="fade-up" onChange={handleEmailChange} className='contact-input' />
                     </div>
 
                     <div className="contact-items">
-                        <label className='contact-name'>Message *</label>
-                        <input type="text" value={message} onChange={handleMessageChange} className='contact-input' />
+                        <label className='contact-name' data-aos="fade-up">Message *</label>
+                        <input type="text" value={message} data-aos="fade-up" onChange={handleMessageChange} className='contact-input' />
                     </div>
                 </form>
                 <button onClick={sendMessage} className='contact-submit'>Submit message</button>

@@ -6,7 +6,7 @@ import Info from './layout/main/Info'
 import Deliver from './layout/main/Deliver'
 import AboutProject from './layout/main/AboutProject'
 import Contact from './layout/main/Contact'
-import Footer from './layout/footer/footer'
+import Footerr from './layout/footer/Footerr'
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <Deliver/>
       <AboutProject/>
       <Contact/>
-      <Footer/>
+      <Footerr/>
     </div>
   )
 }

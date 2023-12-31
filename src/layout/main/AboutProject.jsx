@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import cloud from '../../assets/images/cloud-network.png'
 import layers from '../../assets/images/layersIcon.png'
 import lineChat from '../../assets/images/line-chartIcon.png'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
 function AboutProject() {
+    useEffect(() => {
+        AOS.init({duration: 2000})
+    }, [])
     const [toggleState, setToggleState] = useState(1)
 
     const toggleTab = (index) => {
@@ -13,17 +18,17 @@ function AboutProject() {
     <section className="about">
         <div className="container">
             <div className="about-tabs">
-                <div className={ toggleState === 1 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(1)}> 
+                <div className={ toggleState === 1 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(1)} data-aos="fade-down"> 
                     <img src={cloud} className='about-image' alt="" />
                     <h1 className='about-tab_title'>Secure data</h1>
                 </div>
 
-                <div className={ toggleState === 2 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(2)}>
+                <div className={ toggleState === 2 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(2)} data-aos="fade-down">
                     <img src={layers} className='about-image' alt="" />
                     <h1 className='about-tab_title'>Smooth experience</h1>
                 </div>
 
-                <div className={ toggleState === 3 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(3)}>
+                <div className={ toggleState === 3 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(3)} data-aos="fade-down">
                     <img src={lineChat} className='about-image' alt="" />
                     <h1 className='about-tab_title'>Quality result</h1>
                 </div>  

@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function Header() {
+    useEffect(() => {
+        AOS.init({duration: 2000})
+    }, [])
   return (
     <section className='header'>
         <div className="container">
             <div className='header-items'>
-                <h3 className='header-text'>Next-gen enterprise</h3>
-                <h1 className='header-name_text'>software development company</h1>
+                <h3 className='header-text' data-aos="fade-up">Next-gen enterprise</h3>
+                <h1 className='header-name_text' data-aos="fade-up">software development company</h1>
                 <div className="header-info">
                     <h1 className='header-info_text' >
                     We think {' '}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
   import { Swiper, SwiperSlide } from 'swiper/react';
   import { Autoplay, Pagination } from 'swiper/modules';
@@ -9,14 +9,17 @@ import React from 'react'
   import 'swiper/css/pagination';
 
   import Arrow from "../../assets/icons/Arrow"
-
-
+  import 'aos/dist/aos.css'
+  import AOS from 'aos'
 function Projects() {
+    useEffect(() => {
+        AOS.init({duration: 2000})
+    }, [])
   return (
     <section className='projects'>
       <div>
         <div className="container">
-          <h1 className='projects-title'>Latest projects</h1>
+          <h1 className='projects-title' data-aos="fade-right">Latest projects</h1>
         </div>
         
         <Swiper
@@ -58,7 +61,7 @@ function Projects() {
             >
               {
                 swiperData.map((item, key) => (
-                    <SwiperSlide  key={key}>
+                    <SwiperSlide  key={key} data-aos="fade-down">
                     <img src={item.img} className='swiper-img' alt="image" />
                     <h1 className='swiper-card__title'>{item.name}</h1>
 
