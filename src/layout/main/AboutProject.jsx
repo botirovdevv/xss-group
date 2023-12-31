@@ -18,17 +18,17 @@ function AboutProject() {
     <section className="about">
         <div className="container">
             <div className="about-tabs">
-                <div className={ toggleState === 1 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(1)} data-aos="fade-down"> 
+                <div className={ toggleState === 1 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(1)} > 
                     <img src={cloud} className='about-image' alt="" />
                     <h1 className='about-tab_title'>Secure data</h1>
                 </div>
 
-                <div className={ toggleState === 2 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(2)} data-aos="fade-down">
+                <div className={ toggleState === 2 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(2)} >
                     <img src={layers} className='about-image' alt="" />
                     <h1 className='about-tab_title'>Smooth experience</h1>
                 </div>
 
-                <div className={ toggleState === 3 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(3)} data-aos="fade-down">
+                <div className={ toggleState === 3 ? "about-tab active" : "about-tab"} onClick={() => toggleTab(3)} >
                     <img src={lineChat} className='about-image' alt="" />
                     <h1 className='about-tab_title'>Quality result</h1>
                 </div>  
